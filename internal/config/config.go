@@ -13,7 +13,8 @@ type Config struct {
 	StoragePath    string     `yaml:"storage_path" env-required:"true"`
 	GRPC           GRPCConfig `yaml:"grpc"`
 	MigrationsPath string
-	TokenTTL       time.Duration `yaml:"token_ttl" env-default:"1h"`
+	// если не указать env-default/required то будет zero value
+	TokenTTL time.Duration `yaml:"token_ttl" env-default:"1h"`
 }
 
 type GRPCConfig struct {
@@ -51,6 +52,7 @@ func MustLoadPath(configPath string) *Config {
 func fetchConfigPath() string {
 	var res string
 
+	// --config="config.yaml"
 	flag.StringVar(&res, "config", "", "path to config file")
 	flag.Parse()
 

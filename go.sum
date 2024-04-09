@@ -1,7 +1,13 @@
 github.com/BurntSushi/toml v1.2.1 h1:9F2/+DoOYIOksmaJFPw1tGFy1eDnIJXg+UHjuD8lTak=
 github.com/BurntSushi/toml v1.2.1/go.mod h1:CxXYINrC8qIiEnFrOxCa7Jy5BFHlXnUU2pbicEuybxQ=
+github.com/BurntSushi/toml v1.3.2 h1:o7IhLm0Msx3BaB+n3Ag7L8EVlByGnpq14C4YWiu/gL8=
+github.com/BurntSushi/toml v1.3.2/go.mod h1:CxXYINrC8qIiEnFrOxCa7Jy5BFHlXnUU2pbicEuybxQ=
 github.com/JustSkiv/protos v0.0.14 h1:XxIpYO26Va2Q3DKVitTSuqbcbgMnuvkkj29RT3jsn4w=
 github.com/JustSkiv/protos v0.0.14/go.mod h1:/OZimabwCueere9/bpTcKf8rvsSiqQZ0/MQ7YlHuKQE=
+github.com/TheHamCore/protos v0.0.0-20240409134925-077bc6668d8f h1:BaCh/BL5p0ZTdc7sAAsmtIDoiPsKR1J4SZEVU6vVhq0=
+github.com/TheHamCore/protos v0.0.0-20240409134925-077bc6668d8f/go.mod h1:ereXi9rP8eSy8OFFXo04NRphxxxYiOCDG+VMPyvqcbs=
+github.com/TheHamCore/protos v1.0.0 h1:8AbVAxiRZKuA6lb3Bt8J/P2QHD7vtH9bDlxnemTmj1c=
+github.com/TheHamCore/protos v1.0.0/go.mod h1:ereXi9rP8eSy8OFFXo04NRphxxxYiOCDG+VMPyvqcbs=
 github.com/brianvoe/gofakeit/v6 v6.23.2 h1:lVde18uhad5wII/f5RMVFLtdQNE0HaGFuBUXmYKk8i8=
 github.com/brianvoe/gofakeit/v6 v6.23.2/go.mod h1:Ow6qC71xtwm79anlwKRlWZW6zVq9D2XHE4QSSMP/rU8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

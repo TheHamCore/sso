@@ -1,14 +1,11 @@
 package main
 
 import (
-	"log/slog"
-	"os"
-	"os/signal"
-	"syscall"
-
-	"grpc-service-ref/internal/app"
+	"fmt"
 	"grpc-service-ref/internal/config"
 	"grpc-service-ref/internal/lib/logger/handlers/slogpretty"
+	"log/slog"
+	"os"
 )
 
 const (
@@ -18,25 +15,30 @@ const (
 )
 
 func main() {
+	// инициализируем объект конфига
 	cfg := config.MustLoad()
-
+	fmt.Printf("%+v", *cfg)
+	// инициализируем логгер
 	log := setupLogger(cfg.Env)
-
-	application := app.New(log, cfg.GRPC.Port, cfg.StoragePath, cfg.TokenTTL)
-
-	go func() {
-		application.GRPCServer.MustRun()
-	}()
-
-	// Graceful shutdown
-
-	stop := make(chan os.Signal, 1)
-	signal.Notify(stop, syscall.SIGTERM, syscall.SIGINT)
-
-	<-stop
-
-	application.GRPCServer.Stop()
-	log.Info("Gracefully stopped")
+	fmt.Println(log)
+	//
+	//// инициализация приложения
+	//application := app.New(log, cfg.GRPC.Port, cfg.StoragePath, cfg.TokenTTL)
+	//
+	//// инициализация grpc сервер
+	//go func() {
+	//	application.GRPCServer.MustRun()
+	//}()
+	//
+	//// Graceful shutdown
+	//
+	//stop := make(chan os.Signal, 1)
+	//signal.Notify(stop, syscall.SIGTERM, syscall.SIGINT)
+	//
+	//<-stop
+	//
+	//application.GRPCServer.Stop()
+	//log.Info("Gracefully stopped")
 }
 
 func setupLogger(env string) *slog.Logger {
